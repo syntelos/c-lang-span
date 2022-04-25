@@ -15,6 +15,9 @@
  * You should have received a copy of the LGPL and GPL along with this
  * program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#ifndef _syntelos_span_h
+#define _syntelos_span_h
+
 #include <stdio.h>
 
 #include "syntelos.h"
@@ -77,3 +80,5 @@ void span_print(FILE*,span*);
 #define span_pointer(sp) (&(sp->source[sp->begin]))
 
 #define span_length(sp) (sp->end-sp->begin)
+
+#endif
