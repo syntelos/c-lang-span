@@ -136,7 +136,27 @@ span* span_read(span* state, off_t offset, char *source, size_t length){
                     state->begin = offset;
 
                     if (span_read_close(state,offset,source,length)){
+
                         return state;
+                    }
+                }
+                else if (span_is_wspace(co)){
+
+                    if (offset > state->begin){
+
+                        state->end = offset;;
+
+                        return state;
+                    }
+                    else if (new){
+
+                        free(state);
+
+                        return null;
+                    }
+                    else {
+
+                        return null;
                     }
                 }
             }

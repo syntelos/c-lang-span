@@ -81,4 +81,6 @@ void span_print(FILE*,span*);
 
 #define span_length(sp) (sp->end-sp->begin)
 
+#define span_is_wspace(ch) (('\a' == ch)||('\b' == ch)||('\t' == ch)||('\n' == ch)||('\v' == ch)||('\f' == ch)||('\r' == ch)||(' ' == ch))
+
 #endif
